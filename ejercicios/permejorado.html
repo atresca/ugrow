@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Persona Mejorado</title>
+	<script type="text/javascript" src="js/permejorado2.js">	</script>
+</head>
+
+<body>
+	<h1>Persona Mejorado</h1>
+	<div style="float:left;width:270px">
+	<b>Persona Fisica</b>
+	<br>
+	Nombre: <input  type="text" id="nameF" />
+	<br>
+	Apellido: <input  type="text" id="apellidoF" />
+	<br>
+	Dni: <input  type="text" id="dniF" />
+	<br>
+	Edad: <input  type="text" id="edadF" />
+	<br>
+	Altura: <input  type="text" id="alturaF" />
+	<br>
+	Domicilio:
+	<br> 
+	Calle: <input  type="text" id="calleF" />
+	Numero: <input  type="text" id="numeroF" />
+	<br><br>
+	<button style="width:100px;height:100px" onclick="agregaPersona('fisica');"> Submit Persona Fisica </button>
+	</div>
+	<div style="width:300px;float:left;display:inline-block">
+	<b>Persona Juridica</b>
+	<br>
+	Razon Social: <input  type="text" id="nameJ" />
+	<br>
+	Nacionalidad: <input  type="text" id="nacionalidadJ" />
+	<br>
+	Patrimonio: <input  type="text" id="patrimonioJ" />
+	<br>
+	Capacidad: <input  type="text" id="capacidadJ" />
+	<br>
+	Domicilio:
+	<br>
+	Calle: <input  type="text" id="calleJ" />
+	Numero: <input  type="text" id="numeroJ" />
+	<br><br><br>
+	<button style="width:100px;height:100px" onclick="agregaPersona('juridica')"> Submit Persona Juridica </button>
+	</div>
+	<br><br><br>
+	<b>Personas:</b>
+	<select id="select"  style="width:250px;margin-right:300px;float:right" onchange="mostrarPersona()">
+		<option value="" selected>Seleccione una persona</option>
+	</select>
+
+</body>
+</html>

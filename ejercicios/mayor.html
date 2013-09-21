@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head><title> Mayor </title> </head>
+
+<body>
+	<script type="text/javascript">		
+		var valores=[true,5,false,"hola","adios",2];
+		function init(){
+				document.write("init");
+		}
+		function mayor(){
+			var mayor="";
+			for (index=0;index!=5;index++){
+				if ((typeof(valores[index])=='string') && (typeof(valores[index+1])=='string')){
+					if((valores[index].length)>(valores[index+1].length)){
+						mayor= valores[index];
+					}else{
+						mayor= valores[index+1];
+					}
+				}
+			}
+		alert(mayor);
+		}
+		
+		/*para test de unidad*/
+		function ok(msg){
+			return msg+"Funciona OK";
+		}
+
+		function fail(msg){
+			return msg+"No funciona ";
+		}
+
+		function comparar(){
+			var and,or,xor;
+			if ((typeof(valores[0])=='boolean') && (typeof(valores[2])=='boolean')){
+				and=(valores[0]&valores[2]);
+				or=(valores[0]|valores[2]);
+				xor=(valores[0]^valores[2]);
+			}
+			alert(Boolean(and));
+			alert((!and)? ok("AND"):fail());
+			alert((or)? ok("OR"):fail());
+			alert((xor)? ok("XOR"):fail());
+		}
+		
+		function operaciones(){
+			if ((typeof(valores[1])=='number') && (typeof(valores[5])=='number')){
+				sumar=valores[1]+valores[5];
+				restar=valores[1]-valores[5];
+				multiplicar=valores[1]*valores[5];
+				dividir=valores[1]%valores[5];
+			}
+			alert(sumar);
+			alert(restar);
+			alert(multiplicar);
+			alert(dividir);
+		}
+	</script>
+	<h1>MAYOR</h1>
+	<button style="width:100px;height:100px" onclick="init()">INIT</button>
+	<button style="width:100px;height:100px" onclick="mayor()">Mayor</button>
+	<button style="width:100px;height:100px" onclick="comparar()">Comparar bool</button>
+	<button style="width:100px;height:100px" onclick="operaciones()">Operaciones</button>
+</body>
+</html>
+

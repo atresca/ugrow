@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>FOR</title>
+	<script type="text/javascript">
+		function init(){
+			var index=1;	
+			for (index;;index++){
+				if (index % 3==0){
+					alert('Multiplo de 3');
+				}
+				else{
+					alert(index);
+				}
+				if(index==10){
+					break;
+				}
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<h1>FOR</h1>
+	<button style="width:100px;height:100px" onclick="init()"> For</button>
+
+</body>
+</html>
